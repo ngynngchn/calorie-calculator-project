@@ -1,0 +1,115 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: Poppins;
+	src: url("/assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+body {
+	font-family: Poppins;
+}
+
+.container {
+	box-shadow: 0px 0px 100px rgb(150, 79, 91);
+	border-radius: 10px;
+	width: 400px;
+	margin: 15vw auto;
+	overflow: hidden;
+}
+header {
+	background-color: rgb(249, 163, 177);
+	color: white;
+	padding: 0.5rem 1rem;
+}
+
+main,
+footer {
+	width: 100%;
+	padding: 1rem 1rem;
+}
+
+form {
+	width: 100%;
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: min-content min-content;
+	grid-template-areas: "height weight" "age sex" "activity activity";
+}
+
+h2,
+label:not(.gender-section label) {
+	font-size: 1rem;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.height-section {
+	grid-area: height;
+}
+.weight-section {
+	grid-area: weight;
+}
+.age-section {
+	grid-area: age;
+}
+.sex-section {
+	grid-area: sex;
+}
+.activity-section {
+	grid-area: activity;
+}
+
+input[type="number"] {
+	all: unset;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid rgb(249, 163, 177);
+}
+
+select {
+	padding: 0.5rem;
+	width: 100%;
+}
+
+/* submit button */
+input[type="submit"] {
+	all: unset;
+	padding: 0.3rem;
+	background-color: pink;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	margin: 1rem 0;
+	width: 100%;
+	cursor: pointer;
+	box-shadow: 0px 0px 6px grey;
+}
+
+input[type="submit"]:active {
+	box-shadow: 0px 0px 2px grey;
+}
+/* footer */
+
+footer p {
+	font-size: 0.6rem;
+}
+
+/* output */
+h3 {
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+
+.output-section p {
+	border-bottom: 2px solid rgb(249, 163, 177);
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+.output-section span {
+	padding-right: 1rem;
+}

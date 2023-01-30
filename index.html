@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calorie Calculator</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Calorie Calculator</h1>
+			</header>
+			<main>
+				<form onsubmit="return false">
+					<!-- INPUT -->
+					<section class="height-section">
+						<label for="height">Your height (in cm):</label>
+						<input type="number" name="height" id="height" required />
+					</section>
+					<section class="weight-section">
+						<label for="weight">Your weight (in kg):</label>
+						<input type="number" name="weight" id="weight" required />
+					</section>
+					<section class="age-section">
+						<label for="age">Your age:</label>
+						<input type="number" name="age" id="age" required />
+					</section>
+					<section class="gender-section">
+						<h2>Your gender:</h2>
+						<input type="radio" name="sex" id="female" value="female" checked />
+						<label for="female">Female</label>
+						<input type="radio" name="sex" id="male" value="male" />
+						<label for="male">Male</label>
+					</section>
+					<section class="activity-section">
+						<label for="activity">Activity level: </label>
+						<select name="activity" id="activity" required>
+							<option value="1.2">
+								Extremely inactive: Only sitting and lying
+							</option>
+							<option value="1.5">
+								Sedentary: Mostly Sitting (e.g. office work)
+							</option>
+							<option value="1.7">
+								Moderately active: Mostly standing(e.g. students, teacher)
+							</option>
+							<option value="1.9">
+								Active: Mostly walking and standing (e.g. sales, waiter,
+								mechanic)
+							</option>
+							<option value="2.2">
+								Very active: Physically demanding job (e.g. construction worker)
+							</option>
+						</select>
+					</section>
+					<input type="submit" value="Submit" />
+				</form>
+				<!-- OUTPUT -->
+
+				<section class="output-section">
+					<h3>Your basal metobolic rate (BMR):</h3>
+					<p><span id="bmr"></span>kcal</p>
+					<h3>Your total caloric intake:</h3>
+					<p><span id="calories"></span>kcal</p>
+				</section>
+			</main>
+
+			<footer>
+				<p>
+					You should consider the result of the calculator as an orientation
+					value, since there are several possibilities of faults, such as
+					deviating basal metabolic rate, wrong time estimation etc.
+				</p>
+			</footer>
+		</div>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
