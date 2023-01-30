@@ -103,6 +103,10 @@ h3 {
 	margin: 1rem 0;
 }
 
+.output-section {
+	border-top: 2px solid rgb(249, 163, 177);
+}
+
 .output-section p {
 	border-bottom: 2px solid rgb(249, 163, 177);
 	display: inline-block;
