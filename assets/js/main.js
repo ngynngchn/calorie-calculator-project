@@ -12,8 +12,10 @@ const activity = document.querySelector("#activity");
 
 //* output
 
+const bmrKJ = document.querySelector("#bmrKJ");
 const bmr = document.querySelector("#bmr");
 const calories = document.querySelector("#calories");
+const caloriesKJ = document.querySelector("#caloriesKJ");
 
 console.log(calories);
 
@@ -31,11 +33,13 @@ const calculateBMR = () => {
 		result = 655.1 + 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value;
 	}
 	bmr.innerHTML = Math.floor(result);
+	bmrKJ.innerHTML = Math.floor(result * 4.18684);
 	return result;
 };
 
 const calculateCalorieIntake = () => {
 	let result = calculateBMR() * activity.value;
+	caloriesKJ.innerHTML = Math.floor(result * 4.18684);
 	calories.innerHTML = Math.floor(result);
 };
 
